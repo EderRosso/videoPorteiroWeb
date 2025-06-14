@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chamar Morador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container" id="container">
+    <h1>Casa 154</h1>
+    <p>Travessa Avelino Silveira</p>
+    <p><strong>Olhe para a câmera e clique em "Chamar"</strong></p>
+
+    <video id="preview" autoplay playsinline muted preload="auto"></video>
+
+    <div class="botoes">
+      <button id="btnChamar">📞 Chamar</button>
+      <!-- <button id="btnCancelar">Cancelar</button> -->
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/visitante.js"></script>
+</body>
+</html>

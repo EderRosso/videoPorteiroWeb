@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atendendo a Porta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📹 Atendendo o Portão</h1>
+
+    <div class="video-wrapper">
+      <div class="video-box">
+        <label>👤 Visitante</label>
+        <video id="remoteVideo" autoplay playsinline></video>
+      </div>
+      <!-- <div class="video-box">
+        <label>🏠 Você</label>
+        <video id="localVideo" autoplay playsinline muted></video>
+      </div> -->
+    </div>
+
+    <div class="actions">
+      <button id="aceitar">✅ Aceitar</button>
+      <button id="recusar">❌ Recusar</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/morador.js"></script>
+</body>
+</html>
