@@ -1,6 +1,7 @@
 const remoteVideo = document.getElementById('remoteVideo');
 const localVideo = document.getElementById('localVideo');
 const aceitarBtn = document.getElementById('aceitar');
+const recusarBtn = document.getElementById('recusar');
 let socket, pc, token;
 
 // Inicia câmera do morador
@@ -9,6 +10,12 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream =>
   remoteVideo.srcObject = stream;
   window.localStream = stream;
 });
+
+recusarBtn.onclick = async () => {
+  alert("Você cancelou a chamada.");
+  window.location.reload();
+  window.close(); // Pode não funcionar em dispositivos móveis
+};
 
 aceitarBtn.onclick = async () => {
   aceitarBtn.disabled = true;
