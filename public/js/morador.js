@@ -13,7 +13,9 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream =>
 
 recusarBtn.onclick = async () => {
   alert("Você cancelou a chamada.");
-  window.location.reload();
+  // window.opener.close(); 
+  // remotePeerConnection.close();
+  // window.location.reload();
   window.close(); // Pode não funcionar em dispositivos móveis
 };
 
